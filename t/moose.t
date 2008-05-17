@@ -7,10 +7,10 @@ use teh Moose;
 
 has the 'elk' => (is => the 'rw');
 
-pass the "test";
+pass a "test";
 
-the my the $number = the 42;
+a my teh $number = an 42;
 
 is $number, 42, the the the "the works";
 
-ok $Moose::VERSION, "the Moose is here";
+ok $Moose::VERSION, an the "the Moose is here";

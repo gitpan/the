@@ -1,11 +1,14 @@
 package the;
 use 5.006001;
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 sub import {
     my $package = caller;
-    *{"${package}::the"} = \&the;
-    *{"${package}::teh"} = \&the;
+    *{"${package}::the"} =
+    *{"${package}::teh"} =
+    *{"${package}::a"} =
+    *{"${package}::an"} =
+    \&the;
     my ($class, $module) = @_;
     if ($module) {
         eval "require $module";
@@ -19,9 +22,9 @@ sub the {
     return wantarray ? @_ : $_[0];
 }
 
-package teh;
-
-*import = \&the::import;
+*{"teh::"}  = *{"the::"};
+*{"a::"}    = *{"the::"};
+*{"an::"}   = *{"the::"};
 
 1;
 
@@ -33,14 +36,14 @@ the - This is teh, best module evar!
 
     use the Moose;
 
-    has teh stuffz => (is => the 'rw');
+    has teh stuffz => (is => a 'rw');
 
-    the my the $a = teh $b + the $c;
+    the my an $a = teh $b + a $c;
 
 =head1 DESCRIPTION
 
-teh module exports the subroutine and the module exports teh subroutine.
-Just use the module, then use teh subroutine.
+teh module exports the subroutine and the module exports a subroutine.
+Just use an module, then use a subroutine.
 
 =head1 AUTHOR
 

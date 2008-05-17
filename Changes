@@ -1,4 +1,8 @@
 ---
+version: 0.11
+date:    Sat May 17 23:22:17 JST 2008
+changes: Add a and an. Thanks Dan Kogai.
+---
 version: 0.10
 date:    Sat May 17 22:41:22 JST 2008
 changes: Initial Release
