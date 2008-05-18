@@ -1,4 +1,11 @@
 ---
+version: 0.12
+date:    Sun May 18 13:20:42 JST 2008
+changes:
+- Remove teh Moose dependency.
+- Refactor the code.
+- More tests.
+---
 version: 0.11
 date:    Sat May 17 23:22:17 JST 2008
 changes: Add a and an. Thanks Dan Kogai.

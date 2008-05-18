@@ -1,14 +1,12 @@
 package the;
 use 5.006001;
-our $VERSION = '0.11';
+no warnings 'redefine';
+our $VERSION = '0.12';
 
 sub import {
     my $package = caller;
-    *{"${package}::the"} =
-    *{"${package}::teh"} =
-    *{"${package}::a"} =
-    *{"${package}::an"} =
-    \&the;
+    *{"${package}::$_"} = sub { return wantarray ? @_ : $_[0] }
+        for qw(a an teh the);
     my ($class, $module) = @_;
     if ($module) {
         eval "require $module";
@@ -18,13 +16,10 @@ sub import {
     }
 }
 
-sub the {
-    return wantarray ? @_ : $_[0];
-}
-
-*{"teh::"}  = *{"the::"};
-*{"a::"}    = *{"the::"};
-*{"an::"}   = *{"the::"};
+*{"a::"} =
+*{"an::"} =
+*{"teh::"} =
+*{"the::"};
 
 1;
 

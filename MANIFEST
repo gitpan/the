@@ -16,3 +16,4 @@ MANIFEST			This list of files
 META.yml
 README
 t/moose.t
+t/the.t

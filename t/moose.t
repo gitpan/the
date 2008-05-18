@@ -1,6 +1,11 @@
 package Elk;
 use lib 'lib';
-use Test::More tests => 3;
+use Test::More;
+
+plan((eval {require Moose; 1})
+    ? (tests => 3)
+    : (skip_all => "requires Moose")
+);
 
 # use the Moose;
 use teh Moose;
