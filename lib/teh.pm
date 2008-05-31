@@ -1,7 +1,7 @@
 package the;
 use 5.006001;
 no warnings 'redefine';
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 sub import {
     my $package = caller;
@@ -11,8 +11,8 @@ sub import {
     if ($module) {
         eval "require $module";
         die $@ if $@;
-        splice @_, 0 ,1;
-        goto &{"${module}::import"};
+        splice @_, 0, 1;
+        goto &{ $module->can('import') };
     }
 }
 

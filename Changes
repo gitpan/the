@@ -1,4 +1,10 @@
 ---
+version: 0.13
+date:    Sat May 31 06:13:08 PDT 2008
+changes:
+- Make it work with inherited imports (rt.cpan.35986)
+- Tanks to teh Adriano Ferreira
+---
 version: 0.12
 date:    Sun May 18 13:20:42 JST 2008
 changes:
