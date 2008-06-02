@@ -8,15 +8,17 @@ SYNOPSIS
 
         the my an $a = teh $b + a $c;
 
+        no more 'Moose';
+
 DESCRIPTION
     teh module exports the subroutine and the module exports a subroutine.
-    Just use an module, then use a subroutine.
+    Just use an module, then use more subroutine.
 
 AUTHOR
-    Ingy dÃ¶t Net <ingy@cpan.org>
+    Ingy döt Net <ingy@cpan.org>
 
 COPYRIGHT
-    Copyright (c) 2008. Ingy dÃ¶t Net.
+    Copyright (c) 2008. Ingy döt Net.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

@@ -9,6 +9,7 @@ inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/a.pm
 lib/an.pm
+lib/more.pm
 lib/teh.pm
 lib/the.pm
 Makefile.PL
@@ -16,4 +17,5 @@ MANIFEST			This list of files
 META.yml
 README
 t/moose.t
+t/no.t
 t/the.t
