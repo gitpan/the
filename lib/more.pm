@@ -1,7 +1,7 @@
 package the;
 use 5.006001;
 no warnings 'redefine';
-our $VERSION = '0.14';
+our $VERSION = '0.15';
 
 sub import {
     my $package = caller;
